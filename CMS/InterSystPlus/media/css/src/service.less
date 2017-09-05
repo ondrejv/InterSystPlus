@@ -1,0 +1,78 @@
+// Unsorted blocks
+.service {
+	text-align: center;	
+	margin-bottom: @section-margin;
+	padding: @section-margin * 0.5;
+	box-sizing:border-box;
+	// button
+	.button {
+		margin: 0 auto;
+	}
+}
+.service__icon {
+	.make-service-icon(@color-blue-100);
+}
+.service__icon--secondary {
+	color: @color-magenta-100;
+}
+.service__icon--terciary {
+	color: @color-green-100;
+}
+.service__title {
+	margin-top: @base-unit;
+}
+.service__description {
+	min-height: @base-unit * 5;
+}
+
+// Page
+.services {
+	.container--full {
+		background-color: @color-gray-300;		
+		.container {
+			padding-bottom: 0;
+		}
+	}		
+	.tabs__label {
+		margin: 0;
+		padding: @base-unit 0;
+
+		text-align: center;		
+	}
+	.tabs__label--active {
+		background-color: @color-white;
+		border: none;
+	}
+	.tabs__label--active a {
+		color: @color-black-300;
+	}
+	.service__description {
+		padding: 0 @base-unit;
+	}
+	.type__title {
+		display: inline-block;
+	}
+	.type__file {
+		display: inline-block;
+		margin-left: @base-unit;
+	}
+}
+
+// When dropdown is shown
+@media (max-width: @screen-sm-min) {
+	.services {
+		.container--full {
+			padding-top: @base-unit;
+		}	
+		.section__title--sub {
+			display: none;
+		}
+		.service__description {
+			padding: 0;
+			min-height: auto;
+		}
+		.tabs__label {
+			padding: 0;	
+		}
+	}	
+}

@@ -1,0 +1,63 @@
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.box-shadow() {
+    box-shadow: 0px 3px 7px 0px rgba(173,174,174,1);
+}
+
+.gradient(@align, @colorfrom, @colorto) when (@align = left) {
+    background: -moz-linear-gradient(@align, @colorfrom 0%,@colorto 100%); // FF3.6+
+    background: -webkit-linear-gradient(@align, @colorfrom 0%,@colorto 100%); // Chrome10+,Safari5.1+
+    background: -o-linear-gradient(@align, @colorfrom 0%,@colorto 100%); // Opera 11.10+
+    background: -ms-linear-gradient(@align, @colorfrom 0%,@colorto 100%); // IE10+
+    background: linear-gradient(to left, @colorfrom 0%,@colorto 100%); // W3C
+}
+
+.gradient(@align, @colorfrom, @colorto) when (@align = right) {
+    background: -moz-linear-gradient(@align, @colorfrom 0%,@colorto 100%); // FF3.6+
+    background: -webkit-linear-gradient(@align, @colorfrom 0%,@colorto 100%); // Chrome10+,Safari5.1+
+    background: -o-linear-gradient(@align, @colorfrom 0%,@colorto 100%); // Opera 11.10+
+    background: -ms-linear-gradient(@align, @colorfrom 0%,@colorto 100%); // IE10+
+    background: linear-gradient(to right, @colorfrom 0%,@colorto 100%); // W3C
+}
+
+// Opacity
+
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+
+// Sizing shortcuts
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+.square(@size) {
+  .size(@size; @size);
+}

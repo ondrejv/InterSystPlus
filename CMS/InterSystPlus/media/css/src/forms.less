@@ -1,0 +1,174 @@
+﻿.form {    
+    label {
+        display: table;
+        margin-bottom: 6px;
+    }
+
+    select,
+    input[type="text"],
+    input[type="password"],
+    input[type="file"],
+    textarea {
+        max-width: 470px;
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        background: @color-gray-300;
+        border: 0;
+        padding: 12px 10px;
+        border-radius: 4px;
+        font-size: 16px;
+
+        &:focus {
+            outline: 0;
+            box-shadow: inset 0 0 0 2px @color-cyan-100;
+            background: @color-gray-100;
+        }
+    }
+
+    select {
+        line-height: 40px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="checkbox"] + label,
+    input[type="radio"] + label {
+        margin-bottom: @base-unit * 0.5;
+    }
+
+    input[type="checkbox"] + label:before,
+    input[type="radio"] + label:before {
+        content: "\00a0";
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        display: inline-block;
+        margin-right: 10px;
+        border-radius: 2px;
+        background-color: @color-gray-300;
+        box-sizing: border-box;
+    }
+
+    input[type="checkbox"]:checked + label:before {
+        font-family: 'Core-icons';
+        font-size: 16px;
+        line-height: 16px;
+        content: @icon-cb-check-sign;
+        color: @color-white;
+        background-color: @color-cyan-100;
+        text-align: center;
+    }
+
+    input[type="radio"] + label:before {
+        border-radius: 8px;
+    }
+
+    input[type="radio"]:checked + label:before {
+        font-family: 'Core-icons';
+        font-size: 10px;
+        line-height: 17px;
+        content: @icon-circle;
+        color: @color-cyan-100;
+        text-align: center;
+        vertical-align: 3px;
+    }
+    .radio {
+       margin: @base-unit * 0.75 @base-unit 0 0;
+       display: inline-block;
+       label {
+        display: inline-block;
+        margin-right: 16px;
+        }
+    }
+}
+
+.form__watermark {
+    color: @color-gray-500;
+}
+
+// Validacni hlasky
+.ErrorLabel, .EditingFormErrorLabel {
+    color: @color-magenta-50;
+    display: inline-block;
+}
+.ErrorLabel {
+    margin-bottom: @base-unit;    
+}
+ .EditingFormErrorLabel {
+    margin-top: @base-unit * 0.125;
+ }
+
+ // Form layout
+.form__row {
+    margin-bottom: @base-unit;
+}
+
+.form__col {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form__col-half {
+    width: calc(~"50% - 2px");
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form__col-quarter {
+    width: calc(~"25% - 2px");
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form__col-three-quarters {
+    width: calc(~"75% - 2px");
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form__col--left {
+    padding-right: 5px;
+}
+
+.form__col--right {
+    padding-left: 5px;
+}
+
+// Hacky
+.IE8, .IE7 {
+    input[type="checkbox"],
+    input[type="radio"] {
+        display: inline;
+    }
+
+    input[type="checkbox"] + label:before,
+    input[type="radio"] + label:before {
+        display: none;
+    }
+
+    label {
+        display: inline;
+    }
+
+    input[type="checkbox"] + label:after,
+    input[type="radio"] + label:after {
+        content: " ";
+        display: block;
+        height: 10px;
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .form__col-half, .form__col-quarter, .form__col-three-quarters {
+        width: 100%;
+    }
+    .form__col--right {
+        padding-left: 0;
+        padding-top: @base-unit;
+    }
+}

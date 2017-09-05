@@ -1,0 +1,43 @@
+// Icons
+// Circle icon
+.make-circle-icon(@bgcolor, @color, @size, @iconsize) {
+	i {
+		//background-color: @bgcolor;
+		border-radius: 50%;
+		color: @color;
+		display: inline-block;
+		font-size: @iconsize;
+		width: @size;
+		height: @size;
+		line-height: @size;
+		position: relative;
+		padding: 1px;      
+		text-align: center;                 
+		&:after{
+			box-shadow: 0 0 0 3px @bgcolor;
+			border-radius: 50%;
+			content: "";
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transform: scale(0.95);
+			opacity: 0;
+			filter: alpha(opacity=0);
+			transition: all 0.2s ease 0s;
+			width: 100%;
+		}
+	}
+}
+
+// Circle icon
+.make-service-icon(@color) {
+	color: @color;
+	display: inline-block;
+	font-size: @icon-size-150;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	text-align: center;                 
+}

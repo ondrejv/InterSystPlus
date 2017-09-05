@@ -1,0 +1,105 @@
+@font-face {
+    font-family:'Core-icons';
+    src:url('../fonts/Core-icons.eot');
+    src:url('../fonts/Core-icons.svg#Core-icons') format('svg'), 
+    url('../fonts/Core-icons.eot?#iefix') format('embedded-opentype'), 
+    url('../fonts/Core-icons.woff') format('woff'),
+    url('../fonts/Core-icons.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family:'Core-icons';
+    display: inline-block;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 16px;
+    // Better Font Rendering in Chrome 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-"]:before {
+    content: @icon-square;
+}
+.icon-only:before {
+    content: none;
+}
+
+// Sizes of CMS icons
+
+// Icons on dashboard
+.cms-icon-200
+{
+    font-size: @icon-size-200;
+    height: @icon-size-200;
+    width: @icon-size-200;
+    padding: (@base-unit * 0.5) 0 (@base-unit * 0.5);
+}
+
+// Notifications
+.cms-icon-150
+{
+    font-size: @icon-size-150;
+    height: @icon-size-150;
+    width: @icon-size-150;
+    padding: @base-unit * 0.5;
+}
+
+// Icons in header
+.cms-icon-100
+{
+    font-size: @icon-size-100;
+    height: @icon-size-100;
+    width: @icon-size-100;
+    padding: @base-unit * 0.25;
+}
+
+// Standard icon size
+.cms-icon-80
+{
+    font-size: @icon-size-80;
+    height: @icon-size-80;
+    width: @icon-size-80;
+    padding: @base-unit * 0.25;
+}
+
+
+@icon-cb-check-sign: "\e6b0";
+@icon-circle: "\e6ac";
+@icon-square: "\e619";
+@icon-chevron-up: "\e667";
+@icon-chevron-down: "\e66f";
+@icon-chevron-left: "\e66c";
+@icon-chevron-right: "\e669";
+@icon-menu: "\e650";
+@icon-smartphone: "\e61d";
+@icon-message: "\e64f";
+@icon-box-cart: "\e6cd";
+@icon-form: "\e689";
+@icon-l-cols-4: "\e710";
+@icon-modal-close: "\e64a";
+@icon-cloud: "\e701";
+@icon-bullseye: "\e6ba";
+@icon-file-pdf: "\e6a3";
+
+.icon-cb-check-sign:before {content: @icon-cb-check-sign; }
+.icon-circle:before {content: @icon-circle; }
+.icon-square:before {content: @icon-square; }
+.icon-chevron-up:before { content: @icon-chevron-up; }
+.icon-chevron-down:before { content: @icon-chevron-down; }
+.icon-chevron-left:before { content: @icon-chevron-left; }
+.icon-chevron-right:before { content: @icon-chevron-right; }
+.icon-menu:before { content: @icon-menu; }
+.icon-smartphone:before { content: @icon-smartphone; }
+.icon-message:before { content: @icon-message; }
+.icon-box-cart:before { content: @icon-box-cart; }
+.icon-form:before { content: @icon-form; }
+.icon-l-cols-4:before { content: @icon-l-cols-4; }
+.icon-modal-close:before { content: @icon-modal-close; }
+.icon-cloud:before { content: @icon-cloud; }
+.icon-bullseye:before { content: @icon-bullseye; }
+.icon-file-pdf:before { content: @icon-file-pdf; }

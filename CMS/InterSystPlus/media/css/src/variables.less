@@ -1,0 +1,137 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Base
+@base-unit:               16px;
+
+// Type
+@type-margin-top: 28px;
+@type-margin-bottom: 12px;
+@type-font-size-base: @base-unit;
+@type-padding-overlay-left-right: @base-unit * 1.5;
+@type-padding-overlay-top-bottom: @base-unit * 0.5;
+
+// Scaffolding
+@section-margin: @base-unit * 2;
+
+//-- Z-index master list
+
+// TBD
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small phone - [iPhone 4 portrait]
+@screen-xxs-min:              320px;
+
+// Extra small phone [iPhone 4 landscape]
+@screen-xs-min:              480px;
+
+// Small screen / tablet [iPad portrait]
+@screen-sm-min:              768px;
+
+// Medium screen / desktop [iPad landscape]
+@screen-md-min:              1024px;
+
+// Large screen / wide desktop
+@screen-lg-min:              1200px;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xxs-max:              (@screen-xs-min - 1);
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+// Number of columns in the grid.
+@grid-columns:              24;
+// Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width-xs:      20px;
+@grid-gutter-width-sm:      20px;
+@grid-gutter-width-md:      20px;
+@grid-gutter-width:         20px;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// For `@screen-sm-min` and up.
+@container-sm:                 720px;
+
+// For `@screen-md-min` and up.
+@container-md:                 960px;
+
+// For `@screen-lg-min` and up.
+@container-lg:                 1180px;
+
+
+
+//== Colors
+//
+@color-base:        #2c2e2e;
+
+// Extra colors
+@color-cyan-100:    #00a2b8;
+@color-cyan-200:    #008193;
+@color-blue-50:     #295A80; // blue text
+@color-blue-70:     #4985b3; // blue text hover
+@color-blue-100:    #57a8e6; 
+@color-blue-300:    #bdd9ef;
+@color-magenta-50:  #f02fa1;
+@color-magenta-100: #ee4bab; // logo, houses
+@color-orange-100:  #f14b00;
+@color-orange-200:  #d84300;
+@color-green-100:   #45992e;
+@color-green-50:    #34831f;
+
+// Gray
+@color-white:       #ffffff;
+@color-gray-100:    #fbfcfc;
+@color-gray-200:    #eef2f3;
+@color-gray-300:    #dde6e8;
+@color-gray-400:    #c6cfd0;
+@color-gray-500:    #b5b5b5;
+
+// Black
+@color-black-100:   #6e7374;  
+@color-black-200:   #585c5c;
+@color-black-300:   #424545; // basic text
+@color-black-400:   #161717;
+@color-black:       #000000;
+
+// Gradient values
+@color-white-gradient-transparent: rgba(255,255,255,0);
+@color-white-gradient: rgba(255,255,255,1);
+
+
+// Transparent colors
+@color-blue-100-transparent: rgba(87, 168, 230, 0.7);
+@color-magenta-100-transparent: rgba(238, 75, 171, 0.7);
+
+
+// Iconography
+// -------------------------
+@icon-size-200:           @base-unit * 4;    // ~64px App icons on dashboard
+@icon-size-150:           @base-unit * 2;    // ~32px Notifications
+@icon-size-100:           @base-unit * 1.5;  // ~24px Icons in header
+@icon-size-80:            @base-unit;        // ~16px Standard icon size
+
+// Menu
+// -------------------------
+@menu-line-height:           16px;
+@menu-padding-top-bottom:    28px;
+@menu-padding-top-bottom-sm: 20px;
+@menu-height:                @menu-line-height + @menu-padding-top-bottom * 2;
+@menu-height-sm:             @menu-line-height + @menu-padding-top-bottom-sm * 2;
+@menu-side-indent:           10px;
+@menu-side-indent-sm:        0;
+@menu-link-font-size:        @base-unit;

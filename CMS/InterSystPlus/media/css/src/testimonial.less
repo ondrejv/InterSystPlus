@@ -1,0 +1,25 @@
+.testimonial {
+	color: @color-gray-300;
+	border-left: 10px solid @color-black-200;
+	padding: 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+	&:before {
+		color: @color-gray-300;;
+		content: open-quote;
+		font-size: 4em;
+		line-height: 0.1em;
+		margin-right: 0.25em;
+		vertical-align: -0.4em;
+	}
+	& .testimonial__quote {
+		font-size: @type-font-size-base;
+		line-height: 1.5;
+		display: inline-block;
+		margin: 0;
+	}
+	& .testimonial__customer {
+		display: inline-block;
+		margin-top: 20px;
+		float: right;
+	}	 
+}

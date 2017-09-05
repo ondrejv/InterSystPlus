@@ -1,0 +1,229 @@
+.portfolio-grid, .portfolio-grid-controls {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.portfolio-grid-controls {
+	text-align: center;
+	margin: 30px 0;
+	.filter {
+		margin: 5px;
+		display: inline-block;
+		background-color: #f6f6f6;
+		color: #444444;
+		font-size: 12px;
+		padding: 15px 20px 14px;
+		text-transform: uppercase;
+		transition: all 0.3s;
+		border-radius: 3px;
+		&:hover {
+			cursor: pointer;
+		}
+		&:hover, &.active {
+			color: @color-white;
+		}
+	}
+}
+.portfolio-grid {
+	margin: 0;
+	font-size: 0px;
+	letter-spacing: 0px;
+ 	word-spacing: 0px;
+	.portfolio-item {		
+		width: 25%;
+		display: none;
+		opacity: 0;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		height: 230px;
+		vertical-align: top;
+		.og-expander {
+		    background: none repeat scroll 0 0 #F6F6F6;
+		    height: 0;
+		    left: 10px;
+		    overflow: hidden;
+		    position: absolute;
+		    text-align: left;
+		    top: auto;
+		    width: calc(~"100% - 20px");
+		    border-bottom: 1px solid #f0f0f0;
+		    .og-close {
+		    	.square(30px);
+		    	text-align: center;
+		    	position: absolute;
+		    	right: 25px;
+		    	top: 25px;
+		    	padding: 0 0 0 1px;
+		    	background-color: #e9e9e9;
+		    	transition: all 0.3s;
+		    	&:after {
+		    		font-family: 'Core-icons';
+		    		content: "\e64a";
+		    		font-size: 16px;
+		    		line-height: 31px;
+		    		color: #999999;
+		    		transition: all 0.3s;
+		    	}
+		    	&:hover {
+		    		cursor: pointer;
+		    		background-color: #e2e2e2;
+		    		&:after {
+		    			color: #666666;
+		    		}
+		    	}
+		    }
+		    .og-expander-inner {
+			    height: 100%;
+			    padding: 50px 30px;
+			}
+			.og-fullimg, .og-details {
+			    float: left;
+			    height: 100%;
+			    overflow: hidden;
+			    position: relative;
+			    width: 50%;
+			}
+			.og-fullimg {
+				text-align: center;
+				img {
+			    	display: inline-block;
+			    	height: 100%;
+			    	max-width: auto;
+			    }
+			    .og-loading {
+				    animation: 2s ease-in-out 0s normal both infinite loader;
+				    background-color: transparent;
+				    border-radius: 50%;
+				    box-shadow: 0 -45px 1px #dddddd, 45px 30px 1px #dddddd, -45px 30px 1px #dddddd;
+				    height: 20px;
+				    left: 50%;
+				    margin: -25px 0 0 -25px;
+				    position: absolute;
+				    top: 50%;
+				    width: 20px;
+				}
+			}
+		    .og-details {
+			    padding: 0 40px 0 20px;
+			    h3 {
+				    font-size: 52px;
+				    font-weight: 300;
+				    margin-top: 0;
+				    margin-bottom: 10px;
+				    padding: 0 0 10px;
+				}
+				p {
+				    color: #999999;
+				    font-size: 16px;
+				    font-weight: 400;
+				    line-height: 22px;
+				}
+				a {
+				    display: inline-block;
+				    font-size: 16px;
+				    font-weight: 700;
+				    letter-spacing: 2px;
+				    margin: 30px 0 0;
+				    outline: medium none;
+				    text-transform: uppercase;
+				}
+			}
+		}
+		.portfolio-item-inner {
+			.portfolio-image {
+				width: 100%;
+				position: relative;
+				z-index: 5;
+				height: 230px;
+				overflow: hidden;
+				text-align: center;
+				display: inline-block;
+				img {					
+					width: 480px;			
+					height: 230px;
+					transition: all 0.3s;
+					transform: scale(1);
+					position: absolute;
+				    top: -9999px;
+				    bottom: -9999px;
+				    left: -9999px;
+				    right: -9999px;
+				    margin: auto;
+				}
+				&:after {
+					transform: translateY(15px);				
+					transition: all 0.3s;
+					border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #F6F6F6;
+				    border-image: none;
+				    border-style: solid;
+				    border-width: 15px;
+				    content: " ";
+				    height: 0;
+				    left: 50%;
+				    margin: -20px 0 0 -15px;
+				    pointer-events: none;
+				    position: absolute;
+				    bottom: 0;
+				    width: 0;
+				    z-index: 6;
+				}
+			}
+			.portfolio-overlay {
+				opacity: 0;
+				z-index: 6;
+				position: absolute;
+				width: 100%;
+				height: 230px;
+				top: 0;
+				left: 0;
+				transition: opacity 0.3s;
+				.portfolio-details {
+					position: relative;
+					text-align: center;
+					height: 50px;
+					top: 50%;
+					margin-top: -20px;
+					h3 {
+						transition-duration: 0.3s;
+						transition-property: all;
+						color: #ffffff;
+						margin-top: 0;
+						opacity: 0;
+					}
+					h3 {
+						font-size: 18px;
+						text-transform: uppercase;
+						font-weight: 700;
+						margin-bottom: 5px;
+						transform: translateY(10px);
+						transition-delay: 0.2s;
+					}					
+				}
+			}
+			&:hover {
+				cursor: default;
+				.portfolio-image {
+					img {
+						transform: scale(1.3);
+					}
+				}
+				.portfolio-overlay {
+					opacity: 0.5;
+					background-color: @color-blue-300;
+					.portfolio-details {
+						h3 {
+							opacity: 1;						
+							transform: translateY(0px);
+						}
+					}
+				}	
+			}
+		}
+		&.og-expanded {
+			.portfolio-image:after {
+				transform: translateY(0px);			    
+			}
+		}
+	}
+}

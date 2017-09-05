@@ -1,0 +1,64 @@
+﻿.button,
+input[type="submit"] {
+    display: inline-block;
+    font-size: 16px;
+    height: 42px;
+    line-height: 42px;
+    text-decoration: none;
+    padding: 0 32px;
+    border: 0;
+    border-radius: 4px;
+    background: @color-blue-100;
+    color: @color-white;
+    margin: 0 25px 25px 0;
+    transition: all 0.3s ease 0s;
+
+    &:visited {
+        color: @color-white;
+    }
+
+    &:hover, &:active {
+        background: @color-blue-50;
+        color: @color-white;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+    // Secondary button
+    &.button--secondary {
+        background: @color-magenta-100;
+        color: @color-white;
+
+        &:hover, &:active {
+            background: @color-magenta-50;
+            color: @color-white;
+        }
+    }
+    // Terciary button
+    &.button--terciary {
+        background: @color-green-100;
+        color: @color-white;
+
+        &:hover, &:active {
+            background: @color-green-50;
+            color: @color-white;
+        }
+    }
+    // Menu button
+    &.button--menu {
+        background: @color-white;
+        color: @color-black-300;
+        border: solid 2px @color-gray-400;
+        line-height: 38px;
+        margin: 0;
+        &:visited {
+            color: @color-black-300;
+        }
+
+        &:hover, &:active {
+            background: @color-black-100;
+            color: @color-white;
+        }
+    }
+}

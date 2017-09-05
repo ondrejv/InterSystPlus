@@ -1,0 +1,59 @@
+.table {
+	width: 100%;
+	margin-bottom: 32px;
+
+	thead {
+		background-color: @color-gray-200;			
+	}
+
+
+	th, td {
+		text-align: left;
+		padding: 4px 8px;
+		border: 1px solid @color-gray-400;
+	}
+
+	th {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		font-weight: bold;
+	}
+	.col-1 {
+		min-width: 550px;
+	}
+}
+
+//
+// Responsive tables http://zurb.com/playground/responsive-tables
+//
+
+@media only screen and (max-width: 767px) {
+	
+	.scrollable, .pinned {
+		thead {
+			tr {
+				height: 38px !important;
+			}
+		}
+		tbody {
+			tr {
+				height: 30px !important;
+			}
+		}
+	}
+	table.responsive {
+		margin-bottom: 0;
+	}
+	
+	.pinned { position: absolute; left: 0; top: 0; background: #fff; width: 35%; overflow: hidden; overflow-x: scroll; }
+	.pinned table { border-right: none; border-left: none; width: 100%; }
+	.pinned table th, .pinned table td { white-space: nowrap; }
+	.pinned td:last-child { border-bottom: 0; }
+	
+	div.table-wrapper { position: relative; margin-bottom: 20px; overflow: hidden; }
+	div.table-wrapper div.scrollable { margin-left: 35%; }
+	div.table-wrapper div.scrollable { overflow: scroll; overflow-y: hidden; }	
+	
+	table.responsive td, table.responsive th { position: relative; white-space: nowrap; overflow: hidden; }
+	table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }
+}
